@@ -13,8 +13,12 @@ class Pyjack:
 
     def __init__(self):
         """Initialise values needed for the game to work"""
-        self.suits = ["diamonds", "hearts", "spades", "clubs"]
-        self.colours = ["black", "red"]
+        self.suits = [
+            "diamonds", "hearts", "spades", "clubs"
+        ]
+        self.colours = [
+            "black", "red"
+        ]
         self.ranks = [
             "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"
         ]
@@ -23,7 +27,6 @@ class Pyjack:
     def create_deck(self):
         """Method to create a new, randomised deck"""
         for suit in self.suits: # Each suit contains 13 cards, with 52 unique cards in total
-
             if suit == "diamonds" or suit == "hearts":
                 for rank in self.ranks:
                     card = Card(suit, "red", rank)
